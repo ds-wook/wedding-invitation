@@ -1,71 +1,40 @@
-import coverImage from "./cover.jpeg"
-import weddingImage01 from "./wedding_image01.jpeg"
-import weddingImage02 from "./wedding_image02.jpeg"
-import weddingImage03 from "./wedding_image03.jpeg"
-import weddingImage04 from "./wedding_image04.jpeg"
-import weddingImage05 from "./wedding_image05.jpeg"
-import weddingImage06 from "./wedding_image06.jpeg"
-import weddingImage07 from "./wedding_image07.jpeg"
-import weddingImage08 from "./wedding_image08.jpeg"
-import weddingImage09 from "./wedding_image09.jpeg"
-import weddingImage10 from "./wedding_image10.jpeg"
-import weddingImage11 from "./wedding_image11.jpeg"
-import weddingImage12 from "./wedding_image12.jpeg"
-import weddingImage13 from "./wedding_image13.jpeg"
-import snapImage01 from "./snap_image01.jpg"
-import snapImage02 from "./snap_image02.jpg"
-import snapImage03 from "./snap_image03.jpg"
-import snapImage04 from "./snap_image04.jpg"
-import snapImage05 from "./snap_image05.jpg"
-import snapImage06 from "./snap_image06.jpg"
-import snapImage07 from "./snap_image07.jpg"
-import snapImage08 from "./snap_image08.jpg"
-import snapImage09 from "./snap_image09.jpg"
-import snapImage10 from "./snap_image10.jpg"
-import snapImage11 from "./snap_image11.jpg"
-import snapImage12 from "./snap_image12.jpg"
-import snapImage13 from "./snap_image13.jpg"
-import snapImage14 from "./snap_image14.jpg"
-import snapImage15 from "./snap_image15.jpg"
-import snapImage16 from "./snap_image16.jpg"
-import snapImage17 from "./snap_image17.jpg"
-import snapImage18 from "./snap_image18.jpg"
+const gd = (id: string) => `https://lh3.googleusercontent.com/d/${id}`
 
-export const COVER_IMAGE = coverImage
+export const COVER_IMAGE = gd("1zsCDC6GwRwneQiw8W0yVN2t25GypzP6H")
 
 export const WEDDING_IMAGES = [
-  weddingImage01,
-  weddingImage02,
-  weddingImage03,
-  weddingImage04,
-  weddingImage05,
-  weddingImage06,
-  weddingImage07,
-  weddingImage08,
-  weddingImage09,
-  weddingImage10,
-  weddingImage11,
-  weddingImage12,
-  weddingImage13,
+  gd("1TKA1Do5mCYonudx03gLAGPbJdwksiftX"),
+  gd("1QknIT50QCWqWgO62K0qkdx6EoXMe7lze"),
+  gd("1FkuLNAVl6mYyoD7qqU5v-0S9Xn6mP6E0"),
+  gd("1WjP0PWiwEWJjH-s-0D7xm_yzCiKHo1GM"),
+  gd("17YSfYTVGVsR8UiEfV_2bczvOuUw3R165"),
+  gd("1HAXtuaz4tv99ligkiItOtMndWmyDn7ki"),
+  gd("11_lJXnGvv__h1VZYjf2SG4jD1YMEqJKY"),
+  gd("1RMV3039fHrcnSsQRbswe-m5Z8nyFAdKR"),
+  gd("1dUoS_rdUkXHKkLN1PlMuoSxXnRMPoNMp"),
+  gd("1D9ohMExNwlsX6kpBvpMQrqNOqQ5kwbAB"),
+  gd("1-M0cFk9_UcVoNNxBM1psDpoJ_n6iXp0s"),
+  gd("1fOmFcbOl4gsrvVpb2fpT4mEN5YD1LPdv"),
+  gd("1U9hE3uZwSG9BaNhtXCxW45MjUEHmbtoh"),
 ]
 
 export const SNAP_IMAGES = [
-  snapImage01,
-  snapImage02,
-  snapImage03,
-  snapImage04,
-  snapImage05,
-  snapImage06,
-  snapImage07,
-  snapImage08,
-  snapImage09,
-  snapImage10,
-  snapImage11,
-  snapImage12,
-  snapImage13,
-  snapImage14,
-  snapImage15,
-  snapImage16,
-  snapImage17,
-  snapImage18,
+  gd("1C5PD1FVOpOCAI-IGbsY1iZlkPytdeuJ0"),
+  gd("137fwjGMeGSBbzISUchmsDqeXM6xgWYJy"),
+  gd("1ebS-KTuvlbfseNxAqX5wr9QJAvE-mRRl"),
+  gd("1Vt6CNb23ReAxp_TOGKArDKpvzSVJFxHS"),
+  gd("1BDPQOwIshuPMWgMthMGMkH-WF5vvsOWs"),
+  gd("1P4yLHUcaWMRZuS7ZON7Bxj18YvWxQbju"),
+  gd("1jSX8r54oYC9DTr_3UH6sLknfLOnV8a7w"),
+  gd("1nfKF6ZOAJpNtaL-11Oro1aPVqrb2ZUgZ"),
+  gd("1EQg4tY4pY1bZi0O8ilSeGFWaDeLQ0qy5"),
+  gd("1fLOhGY2YlvhMEB_ce0oqz7G85sXuDEAz"),
+  gd("1gHkHiyc6Tp1fxc4lP4CCX5U-TR6OZTR1"),
+  gd("1tY9dJsqVFBIL_XhdowsA93lmSKHNIX2g"),
+  gd("1VxXFFCjv0fEKRUzetKbUcvp8XBi7eli9"),
+  gd("1w1K7KxkXYdTezh9xOfAfafPG8J9y44Yq"),
+  gd("1BYK3Gr_l7Z97v6PbttEY8YX84i7A0HXD"),
+  gd("1ocn_R1OoZAxxMFIlKz8YwwMIBGOfOxFx"),
+  gd("1qpckXCKBINLgSKHwqGkiSpxEphbFn2oS"),
+  gd("1uudFMadqXp849NE1XHiq5iqP1lmFbu5F"),
 ]
