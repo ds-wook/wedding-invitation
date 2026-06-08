@@ -2,10 +2,10 @@
   "name": "wedding-invitation",
   "version": "0.1.0",
   "description": "A wedding invitation web page template",
-  "author": "Ju Ho Nam <jhnamnam@gmail.com> (https://juhonamnam.github.io/)",
+  "author": "Wook Lee <leewook94@gmail.com> (https://ds-wook.github.io/)",
   "license": "MIT",
   "private": true,
-  "homepage": "https://ds-wook.github.io/wedding-invitation",
+  "homepage": "https://ds-wook.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
