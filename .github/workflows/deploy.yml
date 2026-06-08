@@ -35,7 +35,7 @@ jobs:
           VITE_NAVER_MAP_CLIENT_ID: ${{ secrets.VITE_NAVER_MAP_CLIENT_ID }}
           VITE_KAKAO_SDK_JS_KEY: ${{ secrets.VITE_KAKAO_SDK_JS_KEY }}
           VITE_STATIC_ONLY: true
-          VITE_GDRIVE_BASE_URL: https://lh3.googleusercontent.com/d
+          VITE_GDRIVE_BASE_URL: ${{ secrets.VITE_GDRIVE_BASE_URL }}
 
       - uses: actions/configure-pages@v4
 
