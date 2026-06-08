@@ -1,4 +1,4 @@
-const gd = (id: string) => `https://lh3.googleusercontent.com/d/${id}`
+const gd = (id: string) => `${import.meta.env.VITE_GDRIVE_BASE_URL}/${id}`
 
 export const COVER_IMAGE = gd("1zsCDC6GwRwneQiw8W0yVN2t25GypzP6H")
 
