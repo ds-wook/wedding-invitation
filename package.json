@@ -1,0 +1,51 @@
+{
+  "name": "wedding-invitation",
+  "version": "0.1.0",
+  "description": "A wedding invitation web page template",
+  "author": "Ju Ho Nam <jhnamnam@gmail.com> (https://juhonamnam.github.io/)",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://ds-wook.github.io/wedding-invitation",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.15",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "dayjs": "^1.11.10",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "sass": "^1.89.2",
+    "typescript": "^4.4.2",
+    "vite": "^7.0.4",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-svgr": "^4.5.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/eslint": "^8",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "playwright": "^1.60.0",
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^8.35.1"
+  }
+}
