@@ -20,9 +20,6 @@ React로 제작된 모던한 모바일 청첩장 웹사이트 템플릿입니다
 - 다양한 기능 지원
   - 🎞️ 이미지 갤러리
   - 🗺️ 웨딩홀 위치 지도 표시
-  - 💌 방명록
-  - 💬 카카오톡 공유
-  - 🎯 참석 의사 전달
 
 ## 사전 요구사항
 
@@ -57,14 +54,6 @@ cp .env.example .env
 - `VITE_KAKAO_SDK_JS_KEY`
   - 카카오톡 공유하기 기능을 위한 KAKAO SDK 키
   - Kakao Developers에서 발급 가능 (JavaScript Key)
-- `VITE_SERVER_URL`
-  - 방명록과 참석 의사 전달 등을 위한 서버의 URL
-  - 서버 소스코드: https://github.com/juhonamnam/wedding-invitation-server
-  - 설정하지 않을 경우 소스코드상에 고정된 방명록만 보여줍니다.
-    - 결혼식 끝난 이후 archive 용으로 사용 가능합니다. 지금까지 올라왔던 모든 방명록을 `offlineGuestBook.json`에 소스코드로 저장하여 read only로 보관해보세요.
-- `VITE_STATIC_ONLY`
-  - 방명록과 참석 의사 전달 기능은 별도의 서버를 호스팅해야 합니다.
-  - 이 기능을 사용하지 않고 정적 웹사이트로만 운영하려면 이 환경변수를 `true`로 설정합니다.
 
 4. 개발 서버 실행:
 
