@@ -4,7 +4,7 @@
 
 이욱 ❤️ 이채은 청첩장입니다.
 
-https://juhonamnam.github.io/wedding-invitation
+https://ds-wook.github.io
 
 실제 저희 결혼식을 위해 직접 디자인한 청첩장이며, 결혼식이 끝난 현재 전화번호, 계좌번호 등의 개인정보를 제외한 상태입니다. 사진 또한 현재 AI 생성 사진으로 대체되었으나, 당시에는 저희의 실제 웨딩 사진이 사용되었습니다.
 
@@ -33,7 +33,7 @@ React로 제작된 모던한 모바일 청첩장 웹사이트 템플릿입니다
 1. 저장소 복제:
 
 ```bash
-git clone https://github.com/juhonamnam/wedding-invitation.git
+git clone https://github.com/ds-wook/wedding-invitation.git
 cd wedding-invitation
 ```
 
