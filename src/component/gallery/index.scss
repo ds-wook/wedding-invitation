@@ -169,6 +169,11 @@ $transition-duration: 0.3s;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
@@ -176,5 +181,99 @@ $transition-duration: 0.3s;
   .footer {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.modal-background .modal.lightbox-modal {
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+  width: auto;
+
+  // X 버튼을 이미지 위에 겹쳐서 표시
+  .header {
+    background-color: transparent;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    z-index: 10;
+    padding: 0;
+
+    .close-button-wrapper .close-button {
+      &::before,
+      &::after {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .content {
+    background-color: transparent;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+
+    .lightbox {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 88vw;
+        max-height: 60vh;
+        object-fit: contain;
+        display: block;
+      }
+
+      .lightbox-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        pointer-events: none;
+
+        .nav-btn {
+          pointer-events: all;
+          padding: 0.5rem;
+          background-color: rgba(0, 0, 0, 0.35);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin: 0 0.4rem;
+
+          .arrow {
+            width: 1.2rem;
+            filter: invert(1);
+
+            &.right {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .lightbox-counter {
+        position: absolute;
+        bottom: 0.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.45);
+        padding: 0.15rem 0.7rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .footer {
+    display: none;
   }
 }
