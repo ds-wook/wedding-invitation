@@ -3,6 +3,48 @@
   to   { transform: rotate(360deg); }
 }
 
+@keyframes intro-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes intro-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-bg-color);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  cursor: pointer;
+
+  &.fading {
+    animation: intro-fade-out 0.8s ease forwards;
+  }
+
+  .intro-names {
+    font-size: 2rem;
+    color: var(--theme-color);
+    letter-spacing: 0.2rem;
+  }
+
+  .intro-hint {
+    font-size: 0.85rem;
+    color: var(--alt-color);
+    animation: intro-pulse 2s ease-in-out infinite;
+  }
+}
+
 .bgm-button {
   position: fixed;
   bottom: 1.4rem;
