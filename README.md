@@ -4,7 +4,7 @@
 
 이욱 ❤️ 이채은 청첩장입니다.
 
-https://ds-wook.github.io
+https://ds-wook.github.io/wedding-invitation/
 
 실제 저희 결혼식을 위해 직접 디자인한 청첩장이며, 결혼식이 끝난 현재 전화번호, 계좌번호 등의 개인정보를 제외한 상태입니다. 사진 또한 현재 AI 생성 사진으로 대체되었으나, 당시에는 저희의 실제 웨딩 사진이 사용되었습니다.
 
@@ -98,9 +98,7 @@ npm run dev
    - Secrets:
      - `VITE_NAVER_MAP_CLIENT_ID`
      - `VITE_KAKAO_SDK_JS_KEY`
-   - Variables:
-     - `VITE_SERVER_URL`
-     - `VITE_STATIC_ONLY`
+     - `VITE_GDRIVE_BASE_URL`
 
 ### 다른 호스팅 플랫폼
 
@@ -118,22 +116,3 @@ npm run build
 ```
 
 4. `build` 디렉토리의 내용을 호스팅 플랫폼에 배포
-
-## 📋 업데이트 내역
-
-### 2025.09.11 - v0.1.0
-
-- CRA에서 Vite로 마이그레이션
-- `yarn` 대신 `npm` 사용
-- `src/const.ts`의 상수가 적용되지 않던 부분 (ex. `index.html`, `manifest.json`) 개선
-- `STATIC_ONLY` 환경변수 설정을 통해 별도의 서버를 필요로 하는 기능을 비활성화 가능
-- [Hotfix] Github의 환경변수명에 `VITE_` 접두사가 붙지 않아 혼란이 있었던 문제 수정
-- [Hotfix] Naver Map API의 최신 업데이트 반영
-
-### 2025.10.07 - v0.1.1
-
-- TypeScript의 타입 에러 수정
-- 웨딩 날짜 포맷 수정 (분 단위가 존재하는 경우 분 단위도 표시하도록 수정)
-- `src/const.ts`에 사용법 주석 추가
-- [Hotfix] 일부 의존성 패키지의 버전 상향
-  - 본 프로젝트는 React Server Component를 사용하지 않아 React2Shell 취약점의 영향을 받지 않습니다. 다만, 커스터마이징 과정에서 해당 기능이 사용될 가능성을 사전에 차단하기 위해 관련 패키지를 업데이트합니다.
