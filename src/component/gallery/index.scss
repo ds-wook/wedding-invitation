@@ -184,20 +184,25 @@ $transition-duration: 0.3s;
   }
 }
 
-.modal.lightbox-modal {
+.modal-background .modal.lightbox-modal {
   background-color: transparent;
   box-shadow: none;
-  width: 100vw;
-  max-width: 100vw;
+  position: relative;
+  width: auto;
 
+  // X 버튼을 이미지 위에 겹쳐서 표시
   .header {
     background-color: transparent;
-    padding: 0.5rem 0.5rem 0;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    z-index: 10;
+    padding: 0;
 
     .close-button-wrapper .close-button {
       &::before,
       &::after {
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }
@@ -213,11 +218,10 @@ $transition-duration: 0.3s;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 60vh;
 
       img {
-        max-width: 95vw;
-        max-height: 80vh;
+        max-width: 88vw;
+        max-height: 60vh;
         object-fit: contain;
         display: block;
       }
@@ -235,17 +239,17 @@ $transition-duration: 0.3s;
 
         .nav-btn {
           pointer-events: all;
-          padding: 0.6rem;
+          padding: 0.5rem;
           background-color: rgba(0, 0, 0, 0.35);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          margin: 0 0.5rem;
+          margin: 0 0.4rem;
 
           .arrow {
-            width: 1.5rem;
+            width: 1.2rem;
             filter: invert(1);
 
             &.right {
@@ -257,14 +261,14 @@ $transition-duration: 0.3s;
 
       .lightbox-counter {
         position: absolute;
-        bottom: 0.8rem;
+        bottom: 0.6rem;
         left: 50%;
         transform: translateX(-50%);
         color: white;
         background-color: rgba(0, 0, 0, 0.45);
-        padding: 0.2rem 0.8rem;
+        padding: 0.15rem 0.7rem;
         border-radius: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
     }
   }
