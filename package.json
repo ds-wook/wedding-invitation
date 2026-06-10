@@ -5,7 +5,7 @@
   "author": "Wook Lee <leewook94@gmail.com> (https://ds-wook.github.io/)",
   "license": "MIT",
   "private": true,
-  "homepage": "https://ds-wook.github.io",
+  "homepage": "https://ds-wook.github.io/wedding-invitation",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
