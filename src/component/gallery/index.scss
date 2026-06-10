@@ -169,6 +169,11 @@ $transition-duration: 0.3s;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
@@ -176,5 +181,95 @@ $transition-duration: 0.3s;
   .footer {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.modal.lightbox-modal {
+  background-color: transparent;
+  box-shadow: none;
+  width: 100vw;
+  max-width: 100vw;
+
+  .header {
+    background-color: transparent;
+    padding: 0.5rem 0.5rem 0;
+
+    .close-button-wrapper .close-button {
+      &::before,
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+
+  .content {
+    background-color: transparent;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+
+    .lightbox {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
+
+      img {
+        max-width: 95vw;
+        max-height: 80vh;
+        object-fit: contain;
+        display: block;
+      }
+
+      .lightbox-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        pointer-events: none;
+
+        .nav-btn {
+          pointer-events: all;
+          padding: 0.6rem;
+          background-color: rgba(0, 0, 0, 0.35);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin: 0 0.5rem;
+
+          .arrow {
+            width: 1.5rem;
+            filter: invert(1);
+
+            &.right {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .lightbox-counter {
+        position: absolute;
+        bottom: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.45);
+        padding: 0.2rem 0.8rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .footer {
+    display: none;
   }
 }

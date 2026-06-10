@@ -386,7 +386,8 @@ export const Gallery = () => {
       <div className="break" />
 
       <Button
-        onClick={() =>
+        onClick={() => {
+          setSlide(0)
           openModal({
             className: "all-photo-modal",
             closeOnClickBackground: true,
@@ -405,12 +406,16 @@ export const Gallery = () => {
                       alt={`${idx}`}
                       draggable={false}
                       onClick={() => {
-                        if (statusRef.current === "stationary") {
-                          if (idx !== slideRef.current) {
-                            move(slideRef.current, idx)
-                          }
-                          closeModal()
-                        }
+                        openModal({
+                          className: "lightbox-modal",
+                          closeOnClickBackground: true,
+                          content: (
+                            <LightboxModal
+                              images={currentImages}
+                              initialIndex={idx}
+                            />
+                          ),
+                        })
                       }}
                     />
                   ))}
@@ -428,10 +433,70 @@ export const Gallery = () => {
               </Button>
             ),
           })
-        }
+        }}
       >
         사진 전체보기
       </Button>
     </LazyDiv>
+  )
+}
+
+const LightboxModal = ({
+  images,
+  initialIndex,
+}: {
+  images: string[]
+  initialIndex: number
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex)
+  const touchStartX = useRef(0)
+
+  const prev = () =>
+    setCurrentIndex((i) => (i - 1 + images.length) % images.length)
+  const next = () => setCurrentIndex((i) => (i + 1) % images.length)
+
+  return (
+    <div
+      className="lightbox"
+      onTouchStart={(e) => {
+        touchStartX.current = e.targetTouches[0].clientX
+      }}
+      onTouchEnd={(e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX.current
+        if (Math.abs(dx) > 50) {
+          if (dx > 0) prev()
+          else next()
+        }
+      }}
+    >
+      <img
+        src={images[currentIndex]}
+        alt={`photo-${currentIndex}`}
+        draggable={false}
+      />
+      <div className="lightbox-nav">
+        <button
+          className="nav-btn prev"
+          onClick={(e) => {
+            e.stopPropagation()
+            prev()
+          }}
+        >
+          <ArrowLeft className="arrow" />
+        </button>
+        <button
+          className="nav-btn next"
+          onClick={(e) => {
+            e.stopPropagation()
+            next()
+          }}
+        >
+          <ArrowLeft className="arrow right" />
+        </button>
+      </div>
+      <div className="lightbox-counter">
+        {currentIndex + 1} / {images.length}
+      </div>
+    </div>
   )
 }
