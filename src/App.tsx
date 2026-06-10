@@ -1,3 +1,4 @@
+import { BGM } from "./component/bgm"
 import { Cover } from "./component/cover"
 import { Location } from "./component/location"
 import "./App.scss"
@@ -13,6 +14,7 @@ import { STATIC_ONLY } from "./env"
 function App() {
   return (
     <div className="background">
+      <BGM />
       <BGEffect />
       <div className="card-view">
         <LazyDiv className="card-group">
