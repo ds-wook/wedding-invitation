@@ -1,37 +1,29 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
+import { BRIDE_FIRSTNAME, GROOM_FIRSTNAME } from "../../const"
+
+const BGM_URL =
+  "https://github.com/ds-wook/wedding-invitation/releases/download/bgm/bgm.mp3"
 
 export const BGM = () => {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
+  const [entered, setEntered] = useState(false)
+  const [fading, setFading] = useState(false)
 
-  const play = () => {
+  const handleEnter = () => {
+    setFading(true)
     audioRef.current?.play().then(() => setPlaying(true)).catch(() => {})
   }
-
-  useEffect(() => {
-    const audio = audioRef.current
-    if (!audio) return
-
-    // 즉시 재생 시도 — 브라우저가 허용하면 바로 재생됨
-    audio.play().then(() => setPlaying(true)).catch(() => {
-      // 브라우저가 막으면 첫 상호작용 시 재생
-      const handleFirstInteraction = () => {
-        play()
-      }
-      window.addEventListener("touchstart", handleFirstInteraction, { once: true })
-      window.addEventListener("click", handleFirstInteraction, { once: true })
-    })
-  }, [])
 
   const toggle = (e: React.MouseEvent) => {
     e.stopPropagation()
     const audio = audioRef.current
     if (!audio) return
-    if (playing) {
+    if (audio.paused) {
+      audio.play().then(() => setPlaying(true)).catch(() => {})
+    } else {
       audio.pause()
       setPlaying(false)
-    } else {
-      play()
     }
   }
 
@@ -39,13 +31,34 @@ export const BGM = () => {
     <>
       <audio
         ref={audioRef}
-        src="https://github.com/ds-wook/wedding-invitation/releases/download/bgm/bgm.mp3"
+        src={BGM_URL}
         loop
         preload="auto"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
       />
-      <button className={`bgm-button${playing ? " playing" : ""}`} onClick={toggle}>
-        ♪
-      </button>
+
+      {!entered && (
+        <div
+          className={`intro-overlay${fading ? " fading" : ""}`}
+          onClick={handleEnter}
+          onAnimationEnd={() => setEntered(true)}
+        >
+          <div className="intro-names">
+            {GROOM_FIRSTNAME} ♥ {BRIDE_FIRSTNAME}
+          </div>
+          <div className="intro-hint">화면을 터치하세요</div>
+        </div>
+      )}
+
+      {entered && (
+        <button
+          className={`bgm-button${playing ? " playing" : ""}`}
+          onClick={toggle}
+        >
+          ♪
+        </button>
+      )}
     </>
   )
 }
