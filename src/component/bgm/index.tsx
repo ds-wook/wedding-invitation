@@ -37,6 +37,7 @@ export const BGM = () => {
         preload="auto"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
+        onLoadedMetadata={(e) => { (e.currentTarget as HTMLAudioElement).volume = 0.35 }}
       />
 
       {!entered && (
