@@ -240,7 +240,7 @@ $transition-duration: 0.3s;
         .nav-btn {
           pointer-events: all;
           padding: 0.5rem;
-          background-color: rgba(0, 0, 0, 0.35);
+          background-color: transparent;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -250,7 +250,6 @@ $transition-duration: 0.3s;
 
           .arrow {
             width: 1.2rem;
-            filter: invert(1);
 
             &.right {
               transform: rotate(180deg);
