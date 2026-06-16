@@ -25,21 +25,26 @@ export const Invitation = () => {
 
       <div className="break" />
 
-      <div className="content">서로 다른 길을 걸어온 두 사람이</div>
-      <div className="content">소중한 인연을 통해</div>
-      <div className="content">평생을 함께하고 싶은 사람을 만났습니다.</div>
-      <div className="break" />
-      <div className="content">닮은 점은 서로를 더욱 가깝게 했고,</div>
-      <div className="content">다른 점은 서로를 더욱 이해하게 했으며,</div>
-      <div className="content">부족한 점은 서로의 존재에 더욱 감사하게 했습니다.</div>
-      <div className="break" />
-      <div className="content">믿음과 사랑 안에서</div>
-      <div className="content">같은 곳을 바라보게 된 저희는</div>
-      <div className="content">이제 하나의 가정을 이루어</div>
-      <div className="content">새로운 시작을 함께하려 합니다.</div>
-      <div className="break" />
-      <div className="content">저희의 소중한 첫걸음에 함께하시어</div>
-      <div className="content">따뜻한 축복을 전해 주시면 감사하겠습니다.</div>
+      <div className="paragraph">
+        <div className="content">서로 다른 길을 걸어온 두 사람이</div>
+        <div className="content">소중한 인연을 통해</div>
+        <div className="content">평생을 함께하고 싶은 사람을 만났습니다.</div>
+      </div>
+      <div className="paragraph">
+        <div className="content">닮은 점은 서로를 더욱 가깝게 했고,</div>
+        <div className="content">다른 점은 서로를 더욱 이해하게 했으며,</div>
+        <div className="content">부족한 점은 서로의 존재에 더욱 감사하게 했습니다.</div>
+      </div>
+      <div className="paragraph">
+        <div className="content">믿음과 사랑 안에서</div>
+        <div className="content">같은 곳을 바라보게 된 저희는</div>
+        <div className="content">이제 하나의 가정을 이루어</div>
+        <div className="content">새로운 시작을 함께하려 합니다.</div>
+      </div>
+      <div className="paragraph">
+        <div className="content">저희의 소중한 첫걸음에 함께하시어</div>
+        <div className="content">따뜻한 축복을 전해 주시면 감사하겠습니다.</div>
+      </div>
 
       <div className="break" />
 
